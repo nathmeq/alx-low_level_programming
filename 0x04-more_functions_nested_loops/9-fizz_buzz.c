@@ -1,42 +1,30 @@
 #include <stdio.h>
+
 /**
- * main - check the code for Holberton School students.
- *
- * Return: void.
+ * main -  prints the numbers from 1 to 100
+ * Return: always 0
  */
 
 int main(void)
 {
+	int h;
+	char fizz[] = "Fizz";
+	char buzz[] = "Buzz";
+	char fibu[] = "FizzBuzz";
 
-	int i = 1;
-
-	while (i <= 100)
+	for (h = 1; h <= 100; h++)
 	{
-		if (i % 3 == 0 && i % 5 == 0)
-		{
-			printf("FizzBuzz");
-		}
-		else if (i % 3 == 0)
-		{
-			printf("Fizz");
-		}
-		else if (i % 5 == 0)
-		{
-			printf("Buzz");
-		}
+		if (h % 3 == 0 && h % 5 != 0)
+			printf(" %s", fizz);
+		else if (h % 5 == 0 && h % 3 != 0)
+			printf(" %s", buzz);
+		else if (h % 3 == 0 && h % 5 == 0)
+			printf(" %s", fibu);
+		else if (h == 1)
+			printf("%d", h);
 		else
-		{
-			printf("%i", i);
-		}
-
-		if (i != 100)
-		{
-			putchar(' ');
-		}
-
-		i++;
+			printf(" %d", h);
 	}
-	putchar('\n');
+	printf("\n");
 	return (0);
-
 }

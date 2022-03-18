@@ -1,2 +1,1 @@
-# low level programming
-**functions and nested loops
+**More on functions and nested loops**
